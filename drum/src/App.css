@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  background: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: fit-content;
+}
+
+.track {
+  clear: both;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.horiLine {
+  width: 1px;
+  height: 80px;
+  background: rgb(212, 212, 212);
+}
+
+.bar {
+  border: rgb(212, 212, 212) 1px solid;
+  width: 60px;
+  height: 80px;
+  margin: 5px;
+  float: left;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+.instrument {
+  border-radius: 0px;
+  background: rgb(112, 112, 112);
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: small;
+  color: aliceblue;
+}
+
+
+/*    not selected not playing    */
+.barfalsefalse {
+  border-radius: 10px;
+  background: rgb(212, 212, 212);
+}
+
+/*   selected not playing     */
+.bartruefalse {
+  border-radius: 10px;
+  background: rgb(181, 228, 190);
+}
+
+/*   not selected but playing     */
+.barfalsetrue {
+  border-radius: 10px;
+  background: rgb(212, 212, 212);
+  border: rgb(255, 255, 255) 1px solid;
+  box-shadow: 0px 0px 2px 2px rgb(240, 255, 230);
+}
+
+/*   selected and playing     */
+.bartruetrue {
+  border-radius: 10px;
+  background: rgb(230, 255, 235);
+  border: rgb(255, 255, 255) 1px solid;
+  box-shadow: 0px 0px 3px 3px rgb(240, 255, 230);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  float: left;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 40px;
+  background: #4CAF50;
+
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 40px;
+  background: #4CAF50;
+
+}
+
+.label {
+  float: left;
+  line-height: 40px;
+  margin: 5px 15px 5px 0px;
+}
+
+.btn-group {
+  width: fit-content;
+  float: right;
+  margin: 5px;
+}
+
+.btn-group .button {
+
+  background-color: #4CAF50;
+  border: 1px solid green;
+  line-height: 25px;
+  height: 40px;
+  width: 65px;
+  padding: 0 20px 0 20px;
+  color: white;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
