@@ -4,7 +4,10 @@
 
 #### start service command:
 
+cd drum
+
 npm run build
+
 npm start
 
 #### view in:
