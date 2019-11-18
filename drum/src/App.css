@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   width: 100vw;
+  height: 100vh;
   background: rgb(50, 50, 50);
   color: rgb(200, 200, 200);
   display: flex;
@@ -9,11 +10,16 @@
 
 .container {
   width: fit-content;
+  height: fit-content;
+}
+
+h1 {
+  font-size: 3vh;
 }
 
 .track {
   clear: both;
-  height: 100px;
+  height: 10vh;
   display: flex;
   justify-content: center;
 }
@@ -27,7 +33,7 @@
 .bar {
   border: rgb(212, 212, 212) 1px solid;
   width: 4vw;
-  height: 80px;
+  height: 9vh;
   margin: 5px;
   float: left;
 }
@@ -41,7 +47,7 @@
   background: rgb(112, 112, 112);
   word-wrap: break-word;
   overflow: hidden;
-  font-size: small;
+  font-size: 2vh;
   color: aliceblue;
 }
 
@@ -76,7 +82,7 @@
 .slider {
   -webkit-appearance: none;
   width: 20vw;
-  height: 40px;
+  height: 5vh;
   margin: 5px;
   background: #d3d3d3;
   outline: none;
@@ -94,20 +100,21 @@
   -webkit-appearance: none;
   appearance: none;
   width: 25px;
-  height: 40px;
+  height: 5vh;
   background: #4caf50;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
-  height: 40px;
+  height: 5vh;
   background: #4caf50;
 }
 
 .label {
   float: left;
-  width: 60px;
-  line-height: 40px;
+  width: 4vw;
+  line-height: 5vh;
+  font-size: 1vw;
   margin: 5px 15px 5px 0px;
 }
 
@@ -121,15 +128,13 @@
   background-color: #4caf50;
   border: 1px solid green;
   line-height: 25px;
-  height: 40px;
+  height: 5vh;
   width: 5vw;
-  padding: auto;
   color: white;
-
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 2vh;
 }
 
 .btn-group .button:hover {
