@@ -14,6 +14,7 @@ class Clock extends React.Component {
     this.adjustBpm = this.adjustBpm.bind(this);
   }
 
+  // start beat with designed bpm
   playTimer() {
     this.setState({
       isOn: true,
@@ -27,15 +28,19 @@ class Clock extends React.Component {
       this.props.beatHandler(this.state.beat);
     }, (1000 * 60) / this.state.bpm);
   }
+  // pause beat
   pauseTimer() {
     this.setState({ isOn: false });
     clearInterval(this.beat);
   }
+  // stop beat
   stopTimer() {
     this.setState({ beat: 0, isOn: false });
     clearInterval(this.beat);
     this.props.stopHandler();
   }
+  // adjust beat,
+
   adjustBpm() {
     this.setState({
       bpm: document.getElementById("bpmRange").value
@@ -53,14 +58,19 @@ class Clock extends React.Component {
   render() {
     let playOrPause =
       this.state.beat === 0 || !this.state.isOn ? (
-        <button className={"button"} onClick={this.playTimer}>
+        <button
+          className={"button"}
+          id="playOrPauseBtn"
+          onClick={this.playTimer}
+        >
           &#9658;
         </button>
       ) : (
-        <button className={"button"} onClick={this.pauseTimer}>
+        <button className={"button"} id="stopBtn" onClick={this.pauseTimer}>
           &#10074;&#10074;
         </button>
       );
+
     let stop = (
       <button
         className={"button"}
@@ -83,7 +93,9 @@ class Clock extends React.Component {
           value={this.state.bpm}
           onChange={this.adjustBpm}
         ></input>
-        <label className="label">BPM:{this.state.bpm}</label>
+        <label data-testid="bpmLabel" className="label">
+          BPM:{this.state.bpm}
+        </label>
         <span className="btn-group">
           {playOrPause}
           {stop}

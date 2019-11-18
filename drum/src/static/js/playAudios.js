@@ -1,57 +1,49 @@
-const audioBodacious = new Audio(process.env.PUBLIC_URL + "audios/Bodacious.wav");
-const audioClap = new Audio(process.env.PUBLIC_URL + "audios/Clap.wav");
-const audioDeepHouse = new Audio(process.env.PUBLIC_URL + "audios/DeepHouse.wav");
-const audioKKSet = new Audio(process.env.PUBLIC_URL + "audios/KKSet.wav");
-const audioSnare4 = new Audio(process.env.PUBLIC_URL + "audios/Snare4.wav");
-const audioSnareTama = new Audio(process.env.PUBLIC_URL + "audios/SnareTama.wav");
-const audioTapeSnare = new Audio(process.env.PUBLIC_URL + "audios/TapeSnare.wav");
-const audioWindowThump = new Audio(process.env.PUBLIC_URL + "audios/WindowThump.wav");
+const audio808_bd_long = new Audio(process.env.PUBLIC_URL + "audios/808/808_bd_long.mp3");
+const audio808_bd_short = new Audio(process.env.PUBLIC_URL + "audios/808/808_bd_short.mp3");
+const audio808_ch = new Audio(process.env.PUBLIC_URL + "audios/808/808_ch.mp3");
+const audio808_clap = new Audio(process.env.PUBLIC_URL + "audios/808/808_clap.mp3");
+const audio808_clav = new Audio(process.env.PUBLIC_URL + "audios/808/808_clav.mp3");
+const audio808_cowbell = new Audio(process.env.PUBLIC_URL + "audios/808/808_cowbell.mp3");
+const audio808_cym = new Audio(process.env.PUBLIC_URL + "audios/808/808_cym.mp3");
+const audio808_ht = new Audio(process.env.PUBLIC_URL + "audios/808/808_ht.mp3");
+
 
 const playAudio = (instrument, vol) => {
     //    audio = audionew Audio(process.env.PUBLIC_URL + "audios/" + instrument + ".wav");
-    let audio = audioBodacious;
+    let audio = audio808_bd_long;
     switch (instrument) {
-        case "Bodacious":
-            audio = audioBodacious;
+        case "808_bd_long":
+            audio = audio808_bd_long;
             break;
-        case "Clap":
-            audio = audioClap;
+        case "808_bd_short":
+            audio = audio808_bd_short;
             break;
-        case "DeepHouse":
-            audio = audioDeepHouse;
+        case "808_ch":
+            audio = audio808_ch;
             break;
-        case "KKSet":
-            audio = audioKKSet;
+        case "808_clap":
+            audio = audio808_clap;
             break;
-        case "Snare4":
-            audio = audioSnare4;
+        case "808_clav":
+            audio = audio808_clav;
             break;
-        case "SnareTama":
-            audio = audioSnareTama;
+        case "808_cowbell":
+            audio = audio808_cowbell;
             break;
-        case "TapeSnare":
-            audio = audioTapeSnare;
+        case "808_cym":
+            audio = audio808_cym;
             break;
-        case "WindowThump":
-            audio = audioWindowThump;
+        case "808_ht":
+            audio = audio808_ht;
             break;
         default:
-            audio = audioWindowThump;
+            audio = audio808_ht;
             break;
     }
-    audio.loop = false;
-    audio.volume = vol / 100;
-    audio.preload = "auto";
-    const playPromise = audio.play();
-    if (playPromise !== undefined) {
-        playPromise.then(_ => {
-                // Automatic playback started!
-                // Show playing UI.
-            })
-            .catch(error => {
-                // Auto-play was prevented
-                // Show paused UI.
-            });
-    }
+    let newAud = audio.cloneNode();
+    newAud.loop = false;
+    newAud.volume = vol / 100;
+    newAud.preload = "auto";
+    newAud.play();
 };
 export default playAudio;

@@ -26,7 +26,7 @@
 
 .bar {
   border: rgb(212, 212, 212) 1px solid;
-  width: 60px;
+  width: 4vw;
   height: 80px;
   margin: 5px;
   float: left;
@@ -44,7 +44,6 @@
   font-size: small;
   color: aliceblue;
 }
-
 
 /*    not selected not playing    */
 .barfalsefalse {
@@ -69,21 +68,21 @@
 /*   selected and playing     */
 .bartruetrue {
   border-radius: 10px;
-  background: rgb(230, 255, 235);
+  background: rgb(168, 255, 185);
   border: rgb(255, 255, 255) 1px solid;
   box-shadow: 0px 0px 3px 3px rgb(240, 255, 230);
 }
 
 .slider {
   -webkit-appearance: none;
-  width: 300px;
+  width: 20vw;
   height: 40px;
   margin: 5px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
   float: left;
 }
 
@@ -96,15 +95,13 @@
   appearance: none;
   width: 25px;
   height: 40px;
-  background: #4CAF50;
-
+  background: #4caf50;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 40px;
-  background: #4CAF50;
-
+  background: #4caf50;
 }
 
 .label {
@@ -121,13 +118,12 @@
 }
 
 .btn-group .button {
-
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: 1px solid green;
   line-height: 25px;
   height: 40px;
-  width: 65px;
-  padding: 0 20px 0 20px;
+  width: 5vw;
+  padding: auto;
   color: white;
 
   text-align: center;

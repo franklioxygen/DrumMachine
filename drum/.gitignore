@@ -6,6 +6,7 @@ scripts/flow/*/.flowconfig
 .grunt
 _SpecRunner.html
 __benchmarks__
+__snapshots__
 build/
 remote-repo/
 coverage/

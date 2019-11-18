@@ -14,18 +14,20 @@ class Bar extends React.Component {
       doClear: false
     };
   }
-
+  // switch selected state
   changeSel() {
     this.setState({ selected: !this.state.selected });
   }
 
   componentDidUpdate() {
+    //play audio if bar is selected and on beat
     if (
       this.props.barId === this.props.currBar &&
       this.state.selected === true
     ) {
       playAudio(this.props.instrument, this.props.vol);
     }
+    // clear all bar's select state
     if (this.props.clearSwitch !== this.state.clearSwitch) {
       this.setState({
         clearSwitch: this.props.clearSwitch,
@@ -36,7 +38,6 @@ class Bar extends React.Component {
 
   render() {
     let playNow = this.state.barId === this.props.currBar;
-
     return (
       <span
         className={["bar" + this.state.selected + playNow, "bar"].join(" ")}

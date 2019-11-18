@@ -13,10 +13,12 @@ class Track extends React.Component {
   render() {
     return (
       <div className={"track"}>
+        {/* front instrument indicator */}
         <Instrument
           instrument={this.props.instrument}
           onClick={this.selectAll}
         ></Instrument>
+        {/* render following bars */}
         {[...Array(this.props.totalBars)].map((e, i) => (
           <span key={i}>
             <Bar
@@ -26,6 +28,7 @@ class Track extends React.Component {
               vol={this.props.vol}
               clearSwitch={this.props.clearSwitch}
             ></Bar>
+            {/* group seprator */}
             {(i + 1) % this.state.groupNum === 0 &&
             i + 1 !== this.props.totalBars
               ? "."

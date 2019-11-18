@@ -12,35 +12,37 @@ class App extends React.Component {
       volume: 50,
       clearSwitch: false,
       instrument: [
-        "Bodacious",
-        "Clap",
-        "DeepHouse",
-        "KKSet",
-        "Snare4",
-        "SnareTama",
-        "TapeSnare",
-        "WindowThump"
+        "808_bd_long",
+        "808_bd_short",
+        "808_ch",
+        "808_clap",
+        "808_clav",
+        "808_cowbell",
+        "808_cym",
+        "808_ht"
       ]
     };
     this.beatHandler = this.beatHandler.bind(this);
     this.stopHandler = this.stopHandler.bind(this);
     this.adjustVol = this.adjustVol.bind(this);
   }
-
+  // syncronize clock beat to bar
   beatHandler(beat) {
     this.setState({
       currBar: beat
     });
   }
+  // click stop button
   stopHandler() {
     this.setState({ currBar: null });
   }
-
+  // adjust volume
   adjustVol() {
     this.setState({
       volume: document.getElementById("volRange").value
     });
   }
+  // clear all selected bars
   clearAll() {
     this.setState({ clearSwitch: !this.state.clearSwitch });
   }
@@ -49,18 +51,20 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="container">
-          <h1> A Drum Beat Sequencer </h1>
-
+          <h1>A Drum Beat Sequencer</h1>
           <input
             id="volRange"
             type="range"
             min="0"
             max="100"
+            step="5"
             className="slider"
             value={this.state.volume}
             onChange={this.adjustVol}
           ></input>
-          <label className="label">VOL:{this.state.volume}%</label>
+          <label data-testid="volLabel" className="label">
+            VOL:{this.state.volume}%
+          </label>
           <Clock
             beatHandler={this.beatHandler}
             stopHandler={this.stopHandler}
