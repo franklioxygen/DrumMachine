@@ -66,7 +66,11 @@ class Clock extends React.Component {
           &#9658;
         </button>
       ) : (
-        <button className={"button"} id="stopBtn" onClick={this.pauseTimer}>
+        <button
+          className={"button"}
+          id="playOrPauseBtn"
+          onClick={this.pauseTimer}
+        >
           &#10074;&#10074;
         </button>
       );
@@ -74,6 +78,7 @@ class Clock extends React.Component {
     let stop = (
       <button
         className={"button"}
+        id="stopBtn"
         onClick={this.stopTimer}
         disabled={!this.state.isOn && this.state.beat === 0}
       >

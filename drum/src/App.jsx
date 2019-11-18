@@ -1,6 +1,7 @@
 import React from "react";
 import Track from "./components/Track";
 import Clock from "./components/Clock";
+import keyboardListener from "./static/js/keyboardListener";
 import "./App.css";
 class App extends React.Component {
   constructor(props) {
@@ -47,6 +48,10 @@ class App extends React.Component {
     this.setState({ clearSwitch: !this.state.clearSwitch });
   }
 
+  componentDidMount() {
+    keyboardListener();
+  }
+
   render() {
     return (
       <div className="App">
@@ -71,7 +76,11 @@ class App extends React.Component {
             totalBars={this.state.totalBars}
           ></Clock>
           <span className={"btn-group"}>
-            <button className={"button"} onClick={() => this.clearAll()}>
+            <button
+              className={"button"}
+              id="clearBtn"
+              onClick={() => this.clearAll()}
+            >
               &#8634;
             </button>
           </span>
