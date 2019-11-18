@@ -40,10 +40,22 @@ const playAudio = (instrument, vol) => {
             audio = audio808_ht;
             break;
     }
+
     let newAud = audio.cloneNode();
     newAud.loop = false;
     newAud.volume = vol / 100;
     newAud.preload = "auto";
-    newAud.play();
+    var promise = newAud.play();
+    // auto play policy https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+    if (promise !== undefined) {
+        promise.catch(error => {
+            // Auto-play was prevented
+            // Show a UI element to let the user manually start playback
+        }).then(() => {
+            // Auto-play started
+        });
+    }
+
+
 };
 export default playAudio;
