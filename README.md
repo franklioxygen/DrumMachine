@@ -6,9 +6,16 @@
 
 cd drum
 
+npm install
+
 npm run build
 
 npm start
+
+#### test:
+
+npm test
+
 
 #### view in:
 
