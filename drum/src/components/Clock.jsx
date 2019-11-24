@@ -52,7 +52,7 @@ class Clock extends React.Component {
           this.state.beat === this.props.totalBars - 1 ? 0 : this.state.beat + 1
       });
       this.props.beatHandler(this.state.beat);
-    }, (1000 * 60) / this.state.bpm);
+    }, (1000 * 60) / (this.state.bpm * 4));
   }
 
   render() {
