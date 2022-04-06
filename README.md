@@ -14,6 +14,9 @@ npm start
 
 npm test
 
+#### deploy on gh-page:
+
+npm run deploy
 
 #### view in:
 
@@ -21,7 +24,7 @@ http://localhost:3000/
 
 This is a drum beat sequencer built with React.
 
-It has 8 instument tracks and 16 colums.
+It has 8 instrument tracks and 16 columns.
 
 User can play/pause, stop the sequencer. User also can use keyboard control:
 
