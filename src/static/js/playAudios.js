@@ -1,11 +1,11 @@
-const audio808_bd_long = new Audio(process.env.PUBLIC_URL + "audios/808/808_bd_long.mp3");
-const audio808_bd_short = new Audio(process.env.PUBLIC_URL + "audios/808/808_bd_short.mp3");
-const audio808_ch = new Audio(process.env.PUBLIC_URL + "audios/808/808_ch.mp3");
-const audio808_clap = new Audio(process.env.PUBLIC_URL + "audios/808/808_clap.mp3");
-const audio808_clav = new Audio(process.env.PUBLIC_URL + "audios/808/808_clav.mp3");
-const audio808_cowbell = new Audio(process.env.PUBLIC_URL + "audios/808/808_cowbell.mp3");
-const audio808_cym = new Audio(process.env.PUBLIC_URL + "audios/808/808_cym.mp3");
-const audio808_ht = new Audio(process.env.PUBLIC_URL + "audios/808/808_ht.mp3");
+const audio808_bd_long = new Audio(process.env.PUBLIC_URL + "/audios/808/808_bd_long.mp3");
+const audio808_bd_short = new Audio(process.env.PUBLIC_URL + "/audios/808/808_bd_short.mp3");
+const audio808_ch = new Audio(process.env.PUBLIC_URL + "/audios/808/808_ch.mp3");
+const audio808_clap = new Audio(process.env.PUBLIC_URL + "/audios/808/808_clap.mp3");
+const audio808_clav = new Audio(process.env.PUBLIC_URL + "/audios/808/808_clav.mp3");
+const audio808_cowbell = new Audio(process.env.PUBLIC_URL + "/audios/808/808_cowbell.mp3");
+const audio808_cym = new Audio(process.env.PUBLIC_URL + "/audios/808/808_cym.mp3");
+const audio808_ht = new Audio(process.env.PUBLIC_URL + "/audios/808/808_ht.mp3");
 
 
 const playAudio = (instrument, vol) => {
