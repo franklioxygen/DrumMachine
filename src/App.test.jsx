@@ -17,7 +17,7 @@ it("renders heading", () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-it("has right inital volume and bpm", () => {
+it("has right initial volume and bpm", () => {
   const { getByTestId, getByText } = render(<App />);
   expect(getByTestId("volLabel")).toHaveTextContent("50");
   expect(getByTestId("bpmLabel")).toHaveTextContent("120");
