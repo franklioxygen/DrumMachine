@@ -1,10 +1,6 @@
 # Drum Beat Sequencer
 
-![Alt text](/screenshot.png "screenshot")
-
 #### start service command:
-
-cd drum
 
 npm install
 
