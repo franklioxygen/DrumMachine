@@ -1,21 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.d507b76f.chunk.css",
-    "main.js": "/static/js/main.62860795.chunk.js",
-    "main.js.map": "/static/js/main.62860795.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.48b66bbe.js",
-    "runtime-main.js.map": "/static/js/runtime-main.48b66bbe.js.map",
-    "static/js/2.5f5ceea0.chunk.js": "/static/js/2.5f5ceea0.chunk.js",
-    "static/js/2.5f5ceea0.chunk.js.map": "/static/js/2.5f5ceea0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.17124d789c76c67c8041a3ac23c56645.js": "/precache-manifest.17124d789c76c67c8041a3ac23c56645.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.d507b76f.chunk.css.map": "/static/css/main.d507b76f.chunk.css.map"
+    "main.css": "/DrumMachine/static/css/main.fc274259.css",
+    "main.js": "/DrumMachine/static/js/main.cf8cf218.js",
+    "index.html": "/DrumMachine/index.html",
+    "main.fc274259.css.map": "/DrumMachine/static/css/main.fc274259.css.map",
+    "main.cf8cf218.js.map": "/DrumMachine/static/js/main.cf8cf218.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.48b66bbe.js",
-    "static/js/2.5f5ceea0.chunk.js",
-    "static/css/main.d507b76f.chunk.css",
-    "static/js/main.62860795.chunk.js"
+    "static/css/main.fc274259.css",
+    "static/js/main.cf8cf218.js"
   ]
 }
